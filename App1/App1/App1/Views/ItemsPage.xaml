@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.ItemsPage"
+              Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+    <ScrollView>
+    <StackLayout VerticalOptions="Center" Spacing="5" Padding="25">
+        <!--<ListView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+                ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Text}" 
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                            <Label Text="{Binding Description}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                        </StackLayout>
+                    </ViewCell>-->
+                <!--</DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+        <Label Text="Name" TextColor="Blue"></Label>
+            <Entry Placeholder="Enter Name"  x:Name="Name" Keyboard="Text"></Entry>
+            <Label Text="Mobile Number" TextColor="Blue"></Label>
+            <Entry Placeholder="Enter Mobile Number"  x:Name="MobileNo" Keyboard="Numeric"></Entry>
+            <Label Text="Comment" TextColor="Blue"></Label>
+            <Editor Placeholder="Add Comment..." x:Name="Comment" HeightRequest="100"></Editor>
+            <Label Text="Email" TextColor="Blue"></Label>
+            <Entry Placeholder="Enter Email..."  x:Name="EmailID" HeightRequest="100"></Entry>
+            <!--<Image x:Name="PhotoImage" />
+            <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />-->
+            <Button Text="Send"  x:Name="Send"></Button>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
